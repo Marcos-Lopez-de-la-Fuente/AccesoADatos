@@ -52,4 +52,4 @@ En el mundo del desarrollo se utilizan diferentes metodologías para crear un pr
 - [Vídeo en español](https://www.youtube.com/watch?v=P25JP0u6UKw).
 - [Vídeo en inglés](https://www.youtube.com/watch?v=9TycLR0TqFA&t).
 
-![Imagen Scrum](Imágenes/Scrum.png)
+![Imagen Scrum](Scrum.png)
