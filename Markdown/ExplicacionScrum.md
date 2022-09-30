@@ -39,18 +39,17 @@ En el mundo del desarrollo se utilizan diferentes metodologías para crear un pr
 
 ---
 
-- ### Product Owner
+| Product Owner | Scrum Master | Team Scrum |
+| -- | -- | -- |
+| Creador del proyecto, idea y máximo responsable | Supervisor y compañero del *Team Scrum* | Equipo de desarrollo |
+| Se encarga de redactar el "***Product Backlog***" con las ideas principales para el proyecto | Solo es 1 persona, esta persona puede ser ***Scrum Master*** de varios ***Team Scrum*** a la vez | Tiene una media 5 miembros
+| Será el cliente final, por lo que el ***Scrum Master*** y el ***Team Scrum*** deberán realizar reuniones cada 2-4 semanas junto al ***Product Owner*** con el fin de comprobar los requisitos de este. (Estas reuniones son llamadas "***Sprint Review***") | Se encarga de supervisar los avances en el proyecto diaríamente y solucionar las necesidades que requiera el ***Team Scrum*** | Cada uno se encargará de sus labores del ***Sprint Backlog*** autónomamente y exponerlos diáriamente al resto del ***Team Scrum*** y ***Scrum Master*** |
 
-  - Creador del proyecto, idea y máximo responsable.
-  - Se encarga de redactar el "***Prodct Backlog***" con las ideas principales para el proyecto.
+## Vídeos importantes sobre Scrum
 
-- ### Scrum Master
+---
 
-  - Supervisor y compañero del *Team Scrum*.
-  - Se encarga de supervisar los avances en el proyecto diaríamente y solucionar las necesidades que requiera el ***Team Scrum***.
+- [Vídeo en español](https://www.youtube.com/watch?v=P25JP0u6UKw).
+- [Vídeo en inglés](https://www.youtube.com/watch?v=9TycLR0TqFA&t).
 
-- ### Team Scrum
-
-  - Equipo de desarrollo.
-  - Tiene una media 5 miembros.
-  - Cada uno se encargará de sus labores del ***Sprint Backlog*** autónomamente y exponerlos diáriamente al resto del ***Team Scrum*** y ***Scrum Master***.
+![Imagen Scrum](Imágenes/Scrum.png)
