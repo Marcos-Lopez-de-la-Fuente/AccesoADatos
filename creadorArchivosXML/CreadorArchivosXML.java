@@ -1,4 +1,3 @@
-package creadorArchivosXML;
 
 import java.io.*;
 
@@ -19,7 +18,7 @@ import org.w3c.dom.Element;
 
 public class CreadorArchivosXML {
 
-    public static final String rutaFitxer = "archivo.xml";
+    public static final String rutaFitxer = "Marcos.xml";
 
     public static void main(String[] args) {
         try {
@@ -28,41 +27,29 @@ public class CreadorArchivosXML {
             Document document = documentBuilder.newDocument();
 
             document.setXmlVersion("1.1");
+            document.setXmlStandalone(false);
 
-            Element root = document.createElement("institut");
+            Element root = document.createElement("cicle");
+            root.setAttribute("codi", "IFC32");
+            root.setAttribute("tipus", "CFGS");
+            root.setAttribute("sigles", "DAM");
+            root.setAttribute("codi", "IFC32");
+            root.setAttribute("nom", "Desenvolupament aplicacions multiplataforma");
             document.appendChild(root);
 
 
-            Element empleat = document.createElement("empleat");
-            root.appendChild(empleat);
+            Element element1 = document.createElement("modul");
+            element1.setAttribute("curs", "2");
+            element1.setAttribute("codi", "0486");
+            root.appendChild(element1);
 
-
-            Attr att_idEmpleat = document.createAttribute("id");
-            att_idEmpleat.setValue("1");
-            empleat.setAttributeNode(att_idEmpleat);
-
-            // ! Otra forma de añadir un atributo en 1 sola línea
-            empleat.setAttribute("idd", "2");
-
-
-            Element nom = document.createElement("nom");
-            nom.appendChild(document.createTextNode("Joan"));
-            empleat.appendChild(nom);
-
-
-            Element llinatge1 = document.createElement("llinatge1");
-            llinatge1.appendChild(document.createTextNode("Moragues"));
-            empleat.appendChild(llinatge1);
-
-
-            Element llinatge2 = document.createElement("llinatge2");
-            llinatge2.appendChild(document.createTextNode("Mas"));
-            empleat.appendChild(llinatge2);
-
-
-            Element telefon = document.createElement("telefon");
-            telefon.appendChild(document.createTextNode("123456789"));
-            empleat.appendChild(telefon);
+            Element element11 = document.createElement("nom");
+            element11.appendChild(document.createTextNode("Accés a dades"));
+            element1.appendChild(element11);
+            Element element12 = document.createElement("nombreHores");
+            element12.appendChild(document.createTextNode("125"));
+            element1.appendChild(element12);
+            
 
 
 
@@ -74,6 +61,7 @@ public class CreadorArchivosXML {
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.METHOD, "xml");
             transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+            
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             // transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "1");
 

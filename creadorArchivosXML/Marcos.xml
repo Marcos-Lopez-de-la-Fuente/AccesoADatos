@@ -1,0 +1,7 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<cicle codi="IFC32" nom="Desenvolupament aplicacions multiplataforma" sigles="DAM" tipus="CFGS">
+    <modul codi="0486" curs="2">
+        <nom>Accés a dades</nom>
+        <nombreHores>125</nombreHores>
+    </modul>
+</cicle>
