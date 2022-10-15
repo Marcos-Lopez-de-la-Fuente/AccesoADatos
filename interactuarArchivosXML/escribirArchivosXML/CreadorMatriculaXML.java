@@ -1,7 +1,7 @@
+package escribirArchivosXML;
 
 import java.io.*;
 
-import javax.xml.crypto.dsig.Transform;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -11,14 +11,13 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.dom.DOMSource;
 
 
-import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 
-public class CreadorArchivosXML {
+public class CreadorMatriculaXML {
 
-    public static final String rutaFitxer = "Marcos.xml";
+    public static final String rutaFitxer = "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuarArchivosXML\\escribirArchivosXML\\matricula.xml";
 
     public static void main(String[] args) {
         try {
@@ -38,6 +37,48 @@ public class CreadorArchivosXML {
             document.appendChild(root);
 
 
+
+            Element element2 = document.createElement("modul");
+            element2.setAttribute("curs", "1");
+            element2.setAttribute("codi", "0483");
+            root.appendChild(element2);
+
+            Element element21 = document.createElement("nom");
+            element21.appendChild(document.createTextNode("Sistemas informáticos"));
+            element2.appendChild(element21);
+            Element element22 = document.createElement("nombreHores");
+            element22.appendChild(document.createTextNode("170"));
+            element2.appendChild(element22);
+
+
+            Element element3 = document.createElement("modul");
+            element3.setAttribute("curs", "1");
+            element3.setAttribute("codi", "0484");
+            root.appendChild(element3);
+
+            Element element31 = document.createElement("nom");
+            element31.appendChild(document.createTextNode("Bases de Datos"));
+            element3.appendChild(element31);
+            Element element32 = document.createElement("nombreHores");
+            element32.appendChild(document.createTextNode("170"));
+            element3.appendChild(element32);
+
+
+            Element element4 = document.createElement("modul");
+            element4.setAttribute("curs", "1");
+            element4.setAttribute("codi", "0485");
+            root.appendChild(element4);
+
+            Element element41 = document.createElement("nom");
+            element41.appendChild(document.createTextNode("Programación"));
+            element4.appendChild(element41);
+            Element element42 = document.createElement("nombreHores");
+            element42.appendChild(document.createTextNode("230"));
+            element4.appendChild(element42);
+
+
+
+
             Element element1 = document.createElement("modul");
             element1.setAttribute("curs", "2");
             element1.setAttribute("codi", "0486");
@@ -49,6 +90,10 @@ public class CreadorArchivosXML {
             Element element12 = document.createElement("nombreHores");
             element12.appendChild(document.createTextNode("125"));
             element1.appendChild(element12);
+
+
+
+
             
 
 
@@ -63,19 +108,17 @@ public class CreadorArchivosXML {
             transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
             
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            // transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "1");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
 
 
 
             DOMSource domOrigen = new DOMSource(document);
-            StreamResult streamResult = new StreamResult(new File(CreadorArchivosXML.rutaFitxer));
+            StreamResult streamResult = new StreamResult(new File(CreadorMatriculaXML.rutaFitxer));
 
 
 
 
             transformer.transform(domOrigen, streamResult);
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
