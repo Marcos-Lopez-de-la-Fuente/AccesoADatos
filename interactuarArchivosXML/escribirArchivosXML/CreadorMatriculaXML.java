@@ -1,4 +1,4 @@
-package escribirArchivosXML;
+package escribirarchivosxml;
 
 import java.io.*;
 

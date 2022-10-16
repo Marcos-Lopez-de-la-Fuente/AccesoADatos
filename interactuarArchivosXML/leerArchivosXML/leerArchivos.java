@@ -1,4 +1,4 @@
-package leerArchivosXML;
+package leerarchivosxml;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
