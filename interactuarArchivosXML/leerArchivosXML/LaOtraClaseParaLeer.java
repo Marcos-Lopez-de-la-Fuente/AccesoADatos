@@ -12,7 +12,7 @@ public class LaOtraClaseParaLeer extends DefaultHandler {
 
     @Override
     public void startDocument() {}
-
+    
     @Override
     public void startElement(String url, String nombreLocal, String nombreCualif, Attributes atributos) {
         System.out.print("<" + nombreCualif + "");
