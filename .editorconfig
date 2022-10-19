@@ -1,0 +1,20 @@
+# Indico al editor que este es el archivo ".editorconfig" principal (Por si ubiese más de 1)
+root = true
+
+
+
+# All files from proyect
+[*]
+end_of_line = lf # Cada vez que guardemos se asegurara de que cada línea acaba con el carácter "\n"
+charset = utf-8 # Codificación de carácteres que queremos emplear
+indent_style = space # Indicar si utilizar espacios o tabuladores
+indent_size = 4 # Cuantos espacios se añadirán en cada tabulación
+trim_trailing_whitespace = true # Asegurarse de que cuando guardamos un archivo se elimine el espacio que pueda haber al final de una línea
+insert_final_newline = true # Asegurarse de que cuando guardemos un archivo se cree una línea en blanco al final de todo si no había ya
+max_line_length = 120 # Indicar el numero de carácteres máximo que queremos introducir en una línea
+
+
+
+# [*.js] ==> Indicar cualquier archivo que tenga como extensión ".js"
+# [*.{js,ts,jsx,tsx,java,py,html}] ==> Lo mismo que el anterior pero con varios tipos de archivos
+# [package.json] ==> Indicar la configuración de 1 archivo en específico
