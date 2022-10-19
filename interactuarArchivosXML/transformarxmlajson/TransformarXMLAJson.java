@@ -9,21 +9,24 @@ import org.json.*; // Librería importada localmente
 
 public class TransformarXMLAJson {
 
-    public static String rutaFitxer = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuarArchivosXML\\escribirarchivosxml\\matricula.xml";
+    public static final String PATHFILEXML = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuarArchivosXML\\escribirarchivosxml\\matricula.xml";
+    private static final String PATHFILEJSON = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuarArchivosXML\\transformarxmlajson\\matricula.json";
     public static final int IDENTACION = 4;
 
     public static void main(String[] args) {
 
         try {
             // Leer archivo xml y convertirlo en String
-            String strfitxerXML = new String(Files.readAllBytes(Paths.get(rutaFitxer)));
+            String strfitxerXML = new String(Files.readAllBytes(Paths.get(TransformarXMLAJson.PATHFILEXML)));
 
-            // Convertir stringxml enn objeto json (Importar localmente la librería org.json)
-            JSONObject objJson = XML.toJSONObject(strfitxerXML);
+            // Convertir stringxml en objeto json (Importar localmente la librería org.json)
+            JSONObject jsonObject = XML.toJSONObject(strfitxerXML);
 
             // Convertir objeto Json en String
-            String strJson = objJson.toString(IDENTACION);
-            System.out.println(strJson);
+            String strJson = jsonObject.toString(TransformarXMLAJson.IDENTACION);
+
+            // Escribir el string "strJson" en el archivo "PATHFILEJSON"
+            Files.write(Paths.get(TransformarXMLAJson.PATHFILEJSON), strJson.getBytes());
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
