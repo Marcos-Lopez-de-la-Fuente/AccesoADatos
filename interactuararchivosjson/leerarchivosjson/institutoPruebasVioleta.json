@@ -1,0 +1,35 @@
+{
+    "institut": "Borja Moll",
+    "empleats": [
+        {
+            "id": 1,
+            "nom": "Joan",
+            "llinatge1": "Moragues",
+            "llinatge2": "Mas",
+            "telefon": 123456789
+        },
+        {
+            "id": 2,
+            "nom": "Toni",
+            "llinatge1": "Riera",
+            "llinatge2": "Carbonell",
+            "telefon": 987654321
+        }
+    ],
+    "alumnes": [
+        {
+            "id": 1,
+            "nom": "Alumno1",
+            "llinatge1": "LlinatgeAlumno1",
+            "llinatge2": "Llinatge2Alumno1",
+            "telefon": 987654321
+        },
+        {
+            "id": 2,
+            "nom": "Alumno2",
+            "llinatge1": "LlinatgeAlumno2",
+            "llinatge2": "Llinatge2Alumno2",
+            "telefon": 987654321
+        }
+    ]
+}
