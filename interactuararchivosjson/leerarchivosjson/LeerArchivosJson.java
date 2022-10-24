@@ -10,8 +10,8 @@ public class LeerArchivosJson {
     JSONObject jsonObject;
     JSONArray jsonArray;
 
-    private static final String PATHFILEJSON = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuararchivosjson\\leerarchivosjson\\matricula.json";
-    private static final String PATHFILEJSONVIOLETA = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuararchivosjson\\leerarchivosjson\\institutoPruebasVioleta.json";
+    private static final String PATHFILEJSON = "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuararchivosjson\\leerarchivosjson\\matricula.json";
+    private static final String PATHFILEJSONVIOLETA = "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuararchivosjson\\leerarchivosjson\\institutoPruebasVioleta.json";
 
     public static void main(String[] args) {
         try {
@@ -41,16 +41,21 @@ public class LeerArchivosJson {
             JSONArray jsonArrayVioleta = jsonObjectVioleta.getJSONArray("empleats");
             System.out.println("Violeta --> getJSONArray(): " + jsonArrayVioleta);
 
-
-
+            // Podemos recorrer el array obtenido anteriormente
             for (int i = 0; i < jsonArrayVioleta.length(); i++) {
+
+                // ! Devuelve el objeto entero con sus atributos
                 System.out.println("empleat index " + i + " - " + jsonArrayVioleta.get(i));
+
+                // ! Mediante el método "getJSONObject()" podremos indicar después una "key" para que nos devuelva su "value"
                 System.out.println("id: " + i + " - " + jsonArrayVioleta.getJSONObject(i).get("id"));
                 System.out.println("nom: " + i + " - " + jsonArrayVioleta.getJSONObject(i).get("nom"));
                 System.out.println("llinatge1: " + i + " - " + jsonArrayVioleta.getJSONObject(i).get("llinatge1"));
                 System.out.println("llinatge2: " + i + " - " + jsonArrayVioleta.getJSONObject(i).get("llinatge2"));
                 System.out.println("telefon: " + i + " - " + jsonArrayVioleta.getJSONObject(i).get("telefon"));
 
+
+                // TODO Mañana le tengo que preguntar la diferencia entre este método y el "get()" ya que al menos devuelven el mismo String
                 System.out.println(jsonArrayVioleta.getJSONObject(i));
             }
 
@@ -58,6 +63,13 @@ public class LeerArchivosJson {
 
 
 
+
+
+
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
             System.out.println();
             // ! matricula.json
             System.out.println("Matricula --> keySet(): " + jsonObject.keySet());
