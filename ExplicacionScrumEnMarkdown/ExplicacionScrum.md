@@ -22,12 +22,12 @@ En el mundo del desarrollo se utilizan diferentes metodologías para crear un pr
 
 ---
 
-- ### <u> Desarrollo en cascada </u>
+- ### Desarrollo en cascada
 
-  - *El modelo en cascada es n modelo inicial qe no tiene porqe ir hacia atrás si no es necesario.*
+  - *El modelo en cascada es n modelo inicial qe no tiene porque ir hacia atrás si no es necesario.*
   - *Se actualizó para poder ir hacia atrás para poder estar preparada para posibles cambios.*
 
-- ### <u> Scrum </u>
+- ### Scrum
 
   - Se basa en la adaptabilidad al cambio de adaptabilidad a cualquier cambio para aumentar las oportunidades de éxito.
   - Scrum es un framework para desarrollar, entregar y mantener productos.
@@ -49,7 +49,7 @@ En el mundo del desarrollo se utilizan diferentes metodologías para crear un pr
 
 ---
 
-- <u> [Vídeo en español](https://www.youtube.com/watch?v=P25JP0u6UKw)</u>.
-- <u> [Vídeo en inglés](https://www.youtube.com/watch?v=9TycLR0TqFA&t)</u>.
+- [Vídeo en español](https://www.youtube.com/watch?v=P25JP0u6UKw).
+- [Vídeo en inglés](https://www.youtube.com/watch?v=9TycLR0TqFA&t).
 
 ![Imagen Scrum](Scrum.png)
