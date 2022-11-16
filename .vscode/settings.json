@@ -4,6 +4,7 @@
         "interactuararchivosjson/json-20220924.jar",
         "c:\\Users\\marco\\Downloads\\jar_files\\jackson-core-2.14.0.jar",
         "c:\\Users\\marco\\Downloads\\jar_files\\jackson-databind-2.14.0.jar",
-        "c:\\Users\\marco\\Downloads\\jar_files\\jackson-annotations-2.14.0.jar"
+        "c:\\Users\\marco\\Downloads\\jar_files\\jackson-annotations-2.14.0.jar",
+        "c:\\Users\\marco\\Downloads\\jar_files\\gson-2.8.2.jar"
     ]
 }
