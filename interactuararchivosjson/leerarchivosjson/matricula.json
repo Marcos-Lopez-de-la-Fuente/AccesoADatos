@@ -3,6 +3,38 @@
         "tipus": "CFGS",
         "codi": "IFC32",
         "sigles": "DAM",
-        "nom": "Desenvolupament aplicacions multiplataforma"
+        "nom": "Desenvolupament aplicacions multiplataforma",
+        "cursos": [
+            {
+                "id": 1,
+                "moduls": [
+                    {
+                        "codi": "0483",
+                        "nom": "Sistemas informáticos",
+                        "nombreHores": 170
+                    },
+                    {
+                        "codi": "0484",
+                        "nom": "Bases de Datos",
+                        "nombreHores": 170
+                    },
+                    {
+                        "codi": "0485",
+                        "nom": "Programación",
+                        "nombreHores": 230
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "moduls": [
+                    {
+                        "codi": "0486",
+                        "nom": "Accés a dades",
+                        "nombreHores": 125
+                    }
+                ]
+            }
+        ]
     }
 }
