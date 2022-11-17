@@ -1,4 +1,4 @@
-package escribirarchivosxml;
+package escribirArchivosXML;
 
 import java.io.*;
 
@@ -17,7 +17,7 @@ import org.w3c.dom.Element;
 
 public class CreadorMatriculaXML {
 
-    public static final String rutaFitxer = "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuarArchivosXML\\escribirArchivosXML\\matricula.xml";
+    public static final String rutaFitxer = "./interactuarArchivosXML/escribirArchivosXML/matricula.xml";
 
     public static void main(String[] args) {
         try {
