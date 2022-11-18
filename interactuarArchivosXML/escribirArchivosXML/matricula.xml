@@ -4,13 +4,13 @@
         <nom>Sistemas informáticos</nom>
         <nombreHores>170</nombreHores>
     </modul>
-    <modul codi="0484" curs="1">
-        <nom>Bases de Datos</nom>
-        <nombreHores>170</nombreHores>
+    <modul codi="0488" curs="2">
+        <nom>Desarrollo de interfaces</nom>
+        <nombreHores>125</nombreHores>
     </modul>
-    <modul codi="0485" curs="1">
-        <nom>Programación</nom>
-        <nombreHores>230</nombreHores>
+    <modul codi="0489" curs="2">
+        <nom>Programación multimedia y dispositivos móviles</nom>
+        <nombreHores>85</nombreHores>
     </modul>
     <modul codi="0486" curs="2">
         <nom>Accés a dades</nom>

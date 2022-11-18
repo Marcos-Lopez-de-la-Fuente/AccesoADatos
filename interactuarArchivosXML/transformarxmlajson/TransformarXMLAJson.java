@@ -9,8 +9,8 @@ import org.json.*; // Librería importada localmente
 
 public class TransformarXMLAJson {
 
-    public static final String PATHFILEXML = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuarArchivosXML\\escribirarchivosxml\\matricula.xml";
-    private static final String PATHFILEJSON = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\AccesoADatos\\interactuarArchivosXML\\transformarxmlajson\\matricula.json";
+    public static final String PATHFILEXML = "./interactuarArchivosXML/escribirArchivosXML/matricula.xml";
+    private static final String PATHFILEJSON = "./interactuararchivosxml/transformarxmlajson/matricula.json";
     public static final int IDENTACION = 4;
 
     public static void main(String[] args) {
@@ -27,6 +27,9 @@ public class TransformarXMLAJson {
 
             // Escribir el string "strJson" en el archivo "PATHFILEJSON"
             Files.write(Paths.get(TransformarXMLAJson.PATHFILEJSON), strJson.getBytes());
+
+
+            System.out.println(new String(Files.readAllBytes(Paths.get(TransformarXMLAJson.PATHFILEJSON))));
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

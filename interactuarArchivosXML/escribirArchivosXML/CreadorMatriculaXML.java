@@ -1,4 +1,4 @@
-package escribirArchivosXML;
+package escribirarchivosxml;
 
 import java.io.*;
 
@@ -38,6 +38,8 @@ public class CreadorMatriculaXML {
 
 
 
+            
+
             Element element2 = document.createElement("modul");
             element2.setAttribute("curs", "1");
             element2.setAttribute("codi", "0483");
@@ -51,29 +53,33 @@ public class CreadorMatriculaXML {
             element2.appendChild(element22);
 
 
+
+
             Element element3 = document.createElement("modul");
-            element3.setAttribute("curs", "1");
-            element3.setAttribute("codi", "0484");
+            element3.setAttribute("curs", "2");
+            element3.setAttribute("codi", "0488");
             root.appendChild(element3);
 
             Element element31 = document.createElement("nom");
-            element31.appendChild(document.createTextNode("Bases de Datos"));
+            element31.appendChild(document.createTextNode("Desarrollo de interfaces"));
             element3.appendChild(element31);
             Element element32 = document.createElement("nombreHores");
-            element32.appendChild(document.createTextNode("170"));
+            element32.appendChild(document.createTextNode("125"));
             element3.appendChild(element32);
 
 
+
+
             Element element4 = document.createElement("modul");
-            element4.setAttribute("curs", "1");
-            element4.setAttribute("codi", "0485");
+            element4.setAttribute("curs", "2");
+            element4.setAttribute("codi", "0489");
             root.appendChild(element4);
 
             Element element41 = document.createElement("nom");
-            element41.appendChild(document.createTextNode("Programación"));
+            element41.appendChild(document.createTextNode("Programación multimedia y dispositivos móviles"));
             element4.appendChild(element41);
             Element element42 = document.createElement("nombreHores");
-            element42.appendChild(document.createTextNode("230"));
+            element42.appendChild(document.createTextNode("85"));
             element4.appendChild(element42);
 
 

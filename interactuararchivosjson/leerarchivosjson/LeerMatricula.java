@@ -42,23 +42,19 @@ public class LeerMatricula {
             JSONArray jsonArray = cicleObject.getJSONArray("cursos");
             System.out.println("getJSONArray(): " + jsonArray);
 
-            System.out.println();
-            System.out.println();
-            System.out.println();
+            System.out.println("\n\n\n");
             // Podemos recorrer el array obtenido anteriormente
             for (int i = 0; i < jsonArray.length(); i++) {
-                System.out.println();
-                System.out.println();
-                System.out.println();
+                System.out.println("\n\n\n\n\n");
 
-                System.out.println("matricula index: " + i);
+                System.out.println("matricula index: " + i + " --- " + jsonArray.getJSONObject(i));
 
                 System.out.println("id: " + jsonArray.getJSONObject(i).get("id"));
 
                 JSONArray jsonArrayInto = jsonArray.getJSONObject(i).getJSONArray("moduls");
                 for (int j = 0; j < jsonArrayInto.length(); j++) {
-                    System.out.println();
-                    System.out.println("modul index: " + j);
+                    System.out.println("\n");
+                    System.out.println("modul index: " + j + " --- " + jsonArray.getJSONObject(i));
 
                     System.out.println("codi: " + jsonArrayInto.getJSONObject(j).get("codi"));
                     System.out.println("nom: " + jsonArrayInto.getJSONObject(j).get("nom"));

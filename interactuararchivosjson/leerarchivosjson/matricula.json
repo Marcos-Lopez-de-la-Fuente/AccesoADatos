@@ -12,22 +12,22 @@
                         "codi": "0483",
                         "nom": "Sistemas informáticos",
                         "nombreHores": 170
-                    },
-                    {
-                        "codi": "0484",
-                        "nom": "Bases de Datos",
-                        "nombreHores": 170
-                    },
-                    {
-                        "codi": "0485",
-                        "nom": "Programación",
-                        "nombreHores": 230
                     }
                 ]
             },
             {
                 "id": 2,
                 "moduls": [
+                    {
+                        "codi": "0488",
+                        "nom": "Desarrollo de interfaces",
+                        "nombreHores": 125
+                    },
+                    {
+                        "codi": "0489",
+                        "nom": "Programación multimedia y dispositivos móviles",
+                        "nombreHores": 85
+                    },
                     {
                         "codi": "0486",
                         "nom": "Accés a dades",
