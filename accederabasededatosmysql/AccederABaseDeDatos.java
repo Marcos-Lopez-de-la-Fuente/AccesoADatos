@@ -31,7 +31,7 @@ public class AccederABaseDeDatos {
 
         // ! Query
         String select = "select * from alumnes";
-        String insert = "INSERT INTO `alumnes` (`id`, `dni_nie`, `nom`, `primer_llinatge`, `segon_llinatge`) VALUES (NULL, '123456789M', 'Marcos', 'Lopez', 'de la Fuente');";
+        String insert = "INSERT INTO `alumnes` VALUES (NULL, '123456789M', 'Marcos', 'Lopez', 'de la Fuente');";
         String query = select;
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -43,13 +43,19 @@ public class AccederABaseDeDatos {
 
             ///////////////////////////////////////////////////////////////////////////////////
 
-            ResultSet resultSet = (ResultSet) aBaseDeDatos.executeQuery(query);
-            aBaseDeDatos.printSelect(resultSet);
+            // ResultSet resultSet = (ResultSet) aBaseDeDatos.executeQuery(select);
+            // aBaseDeDatos.printSelect(resultSet);
 
             ///////////////////////////////////////////////////////////////////////////////////
 
-            // int rows = (int) aBaseDeDatos.executeQuery(query);
+            // int rows = (int) aBaseDeDatos.executeQuery(insert);
             // System.out.println(rows);
+
+            ///////////////////////////////////////////////////////////////////////////////////
+
+            int rows = aBaseDeDatos.executeInsert("alumnes", new String[] {
+                    "NULL", "123456789M", "Marcos", "Lopez", "de la Fuente"
+            });
 
             aBaseDeDatos.getConnection().close();
 
@@ -59,6 +65,29 @@ public class AccederABaseDeDatos {
             e1.printStackTrace();
         }
 
+    }
+
+    public int executeInsert(String table, String[] values) throws SQLException {
+
+        String query = "INSERT INTO " + table + " VALUES (";
+
+        for (int i = 0; i < values.length; i++) {
+            if (i + 1 == values.length) {
+                query += "?);";
+
+            } else {
+                query += "?, ";
+            }
+        }
+
+        PreparedStatement preparedStatement = this.getConnection().prepareStatement(query);
+
+        for (int i = 1; i <= values.length; i++) {
+            preparedStatement.setString(i, values[i - 1]);
+        }
+
+        int rows = preparedStatement.executeUpdate();
+        return rows;
     }
 
     public Object executeQuery(String query) throws SQLException {
@@ -73,15 +102,12 @@ public class AccederABaseDeDatos {
                 break;
 
             case "INSERT":
-                respObject = statement.executeUpdate(query);
-                break;
 
             case "UPDATE":
-                respObject = statement.executeUpdate(query);
-                break;
 
             case "DELETE":
                 respObject = statement.executeUpdate(query);
+
                 break;
 
             default:
