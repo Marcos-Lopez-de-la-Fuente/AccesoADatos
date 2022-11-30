@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 
 public class DML_preparedStatement_result {
 
-    static String selectTBLAlumne = "";
+    static String selectTBLAlumne = "SELECT * FROM institut WHERE idInsti = ?;";
 
     public static void main(String[] args) {
         Connection connection = new JDBC_Connection().Create_JDBC_Connectio();
@@ -19,6 +19,7 @@ public class DML_preparedStatement_result {
         try {
             preparedStatement = connection.prepareStatement(selectTBLAlumne);
 
+            // Para cambiar el parametro "?"
             preparedStatement.setInt(1, 2);
 
             ResultSet resultSet = preparedStatement.executeQuery();
