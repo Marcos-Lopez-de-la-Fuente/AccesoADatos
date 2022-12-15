@@ -9,7 +9,7 @@ public class DDL_statements {
     static String createTBLAlumnes = """
                 create table alumne(
                     idAlumne int not null auto_increment,
-                    dniAlumne varchar(10) not null, nameAlumne varchar(35) default null,
+                    dniAlumne varchar(10) not null,
                     nameAlumne varchar(35) default null,
                     llinatge1Alumne varchar(35) default null,
                     llinatge2Alumne varchar(35) default null,
